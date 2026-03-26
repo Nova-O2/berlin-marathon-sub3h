@@ -1,0 +1,25 @@
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+.env
+.venv/
+desktop.ini
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.claude/
+
+# Generated exports (rebuild with make)
+manuscript/exports/
+
+# Reviewer/co-author imports (temporary .docx with comments/track changes)
+manuscript/imports/
+
+# Original .docx source files (converted to manuscript.md)
+manuscript/*.docx
+
+# Large data files (hosted externally)
+data/*.csv
+data/*.parquet
