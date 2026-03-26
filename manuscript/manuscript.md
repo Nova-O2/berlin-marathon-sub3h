@@ -112,7 +112,7 @@ Effect sizes increased from *r* = 0.664 at 20--25 km to *r* = 0.865 at 25--30 km
 The largest absolute pace difference was observed at 35--40 km, where Failure runners averaged 5.49 ± 0.70 min/km compared to 4.43 ± 0.23 min/km in the Success Group---a gap of 1.06 min/km (*r* = 0.966).
 The final segment (40--42.2 km) maintained a similarly large effect (*r* = 0.931), with Failure runners averaging 5.29 ± 0.68 min/km versus 4.33 ± 0.27 min/km.
 
-![Segment-by-segment pacing comparison between Success and Failure groups. All nine segments were significantly different after Bonferroni correction (*p* < 0.001). Shaded area highlights the progressive divergence in the second half.](../figures/Figure_5_Segment_Divergence.tiff)
+[INSERT FIGURE 5 HERE]
 
 ## Pacing Archetypes
 
@@ -127,13 +127,13 @@ The within-runner pacing CV was 1.48%, indicating high execution discipline.
 Mean starting pace was 4.09 min/km---faster than Archetype 1---but deteriorated sharply to 5.20 min/km, representing a pace change of +29.1%.
 The within-runner pacing CV was 11.07%, indicating highly variable and unstable pacing execution.
 
-![Mean pace profiles (min/km) across nine race segments for each pacing archetype. Shaded bands represent ± 1 SD.](../figures/Figure_1_Pacing_Profiles.tiff)
+[INSERT FIGURE 1 HERE]
 
 The cross-tabulation of archetype membership and race outcome revealed a highly significant association (χ² = 5,614.33, df = 1, *p* < 0.001).
 Among Positive Split / Fade runners, 98.3% achieved sub-3-hour success and only 1.7% failed.
 In stark contrast, among Metabolic Crash runners, 71.3% failed to break the 3-hour barrier, with only 28.7% succeeding despite their aggressive early pace.
 
-![Distribution of race outcomes (Success vs. Failure) within each pacing archetype.](../figures/Figure_2_Cluster_Outcome.tiff)
+[INSERT FIGURE 2 HERE]
 
 ## Predictive Modeling
 
@@ -147,9 +147,9 @@ Pacing CV alone achieved an AUC of 0.965, indicating excellent discriminative ab
 The optimal classification threshold, identified via Youden's J index, was a CV of 5.65%.
 At this threshold, the model correctly identified 99.0% of all runners who failed (sensitivity), while correctly classifying 88.0% of successful runners (specificity), yielding an overall accuracy of 90.1%.
 
-![Pacing variability (CV) distributions for Success and Failure groups.](../figures/Figure_3_CV_by_Outcome.tiff)
+[INSERT FIGURE 3 HERE]
 
-![Start pace (0--5 km) versus finish pace (40 km--Finish) for each runner, colored by outcome. The diagonal represents even-split pacing.](../figures/Figure_4_Start_vs_Finish.tiff)
+[INSERT FIGURE 4 HERE]
 
 # Discussion
 
@@ -158,5 +158,21 @@ At this threshold, the model correctly identified 99.0% of all runners who faile
 # Conclusion
 
 <!-- TODO: write after Discussion -->
+
+# Figure Legends
+
+**Figure 1.** Mean pace profiles (min/km) across nine race segments for each pacing archetype.
+Shaded bands represent ± 1 SD.
+
+**Figure 2.** Distribution of race outcomes (Success vs. Failure) within each pacing archetype.
+
+**Figure 3.** Pacing variability (CV) distributions for Success and Failure groups.
+
+**Figure 4.** Start pace (0--5 km) versus finish pace (40 km--Finish) for each runner, colored by outcome.
+The diagonal represents even-split pacing.
+
+**Figure 5.** Segment-by-segment pacing comparison between Success and Failure groups.
+All nine segments were significantly different after Bonferroni correction (*p* < 0.001).
+Shaded area highlights the progressive divergence in the second half.
 
 # References
