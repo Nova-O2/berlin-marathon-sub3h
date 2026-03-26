@@ -55,7 +55,7 @@ The primary outcome measure was defined as a binary variable: "Success" (finishi
 To identify distinct pacing archetypes without the bias of pre-defined categories (such as "positive split" or "negative split"), we employed K-Means clustering, an unsupervised machine learning algorithm [@pedregosa2011].
 Crucially, to ensure the algorithm clustered runners based on strategic execution rather than absolute velocity, the feature set was normalized: each of the nine segment paces was expressed as a percentage of the runner's individual mean race pace, rather than in absolute units (min/km).
 This transformation allowed the model to group runners based on the relative trajectory of their effort distribution, treating a 3:00 min/km runner and a 4:00 min/km runner identically if they followed the same strategic pattern.
-Unlike the approach used in our companion study on gender pacing differences, which clustered only the Success group, the present analysis applied clustering to both groups combined (*n* = 9,585), enabling direct comparison of archetype distributions between outcomes.
+Critically, the clustering was applied to both groups combined (*n* = 9,585), enabling direct comparison of archetype distributions between outcomes.
 
 The optimal number of clusters was determined empirically using the silhouette score [@rousseeuw1987], computed for *k* = 2 through *k* = 8.
 The silhouette score quantifies how similar each data point is to its own cluster compared to other clusters, with values ranging from --1 (misclassified) to +1 (well-clustered).
