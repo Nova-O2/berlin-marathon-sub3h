@@ -153,11 +153,68 @@ At this threshold, the model correctly identified 99.0% of all runners who faile
 
 # Discussion
 
-<!-- TODO: write after Methods and Results are reviewed -->
+The primary aim of this study was to determine whether pacing execution, independent of aerobic fitness, distinguishes runners who achieve a sub-3-hour marathon from those who fail despite equivalent half-marathon capacity.
+Our analysis of 9,585 runners confirms that pacing variability---not half-marathon speed---is the critical determinant of success at the sub-3-hour barrier.
+Despite near-identical half-marathon split times (1:28:05 vs. 1:28:08), the Failure Group exhibited 3.8 times greater pacing variability and a 13-minute-35-second finish time deficit, demonstrating that the capacity to break 3 hours was present in both groups but was squandered through poor pacing execution.
+This finding extends previous large-scale analyses of marathon pacing collapse.
+Smyth et al. [@smyth2021], analyzing over 4 million race records, reported that 28% of male runners "hit the wall," with fast starts identified as especially injurious to performance.
+Similarly, a recent systematic review confirmed that positive pacing strategies dominate marathon competitions, occurring in approximately 77% of races analyzed [@sha2024].
+However, these prior studies could not disentangle the effects of aerobic fitness from pacing strategy, as faster runners naturally exhibit more even pacing.
+The "Golden Window" design employed here overcomes this limitation by matching groups on half-marathon capacity, thereby isolating pacing execution as the sole variable of interest.
+
+Perhaps the most counterintuitive finding is that Failure runners were paradoxically *faster* than their successful counterparts during the first 15 km of the race.
+This "fast start paradox" is the hallmark of the "fly and die" strategy: an aggressive initial pace that feels sustainable in the early kilometers but carries an unsustainable metabolic cost.
+The crossover point at 15--20 km---approximately the halfway mark---represents the inflection at which the consequences of excessive early glycogen utilization begin to manifest.
+Rapoport [@rapoport2010], using a computational metabolic model, demonstrated that running pace above the lactate threshold depletes glycogen stores at an exponentially faster rate, effectively setting a "metabolic time bomb" that detonates in the final third of the race.
+As Burke et al. [@burke2025] aptly described, the marathon is "the race within a race"---a contest not merely of speed but of energy management over 42.195 km.
+
+The dramatic and progressive pace collapse observed after the 30 km mark (effect sizes escalating from *r* = 0.948 at 30--35 km to *r* = 0.966 at 35--40 km) is consistent with the classical physiological model of glycogen depletion [@hearris2018].
+The transition from carbohydrate-dependent to lipid-dependent metabolism, which occurs upon glycogen exhaustion, necessitates a reduction in sustainable power output of approximately 15--25% due to the lower rate of ATP resynthesis from fatty acid oxidation [@rapoport2010].
+The Metabolic Crash archetype identified in our cluster analysis exhibited a mean pace deterioration of 29.1%---a magnitude consistent with near-complete glycogen depletion.
+The 1.06 min/km pace difference at 35--40 km between groups represents the physiological signature of this metabolic catastrophe: runners who started too fast effectively exhausted their glycogen reserves before reaching the finish line.
+
+While physiology explains *when* the collapse occurs, it does not fully explain *why* these runners selected an unsustainable initial pace.
+The psychobiological model of endurance performance [@marcora2014] posits that perceived exertion---rather than peripheral physiological limits---is the primary mediator of pacing decisions.
+Under this framework, runners continuously evaluate their effort perception against the expected demands of the remaining distance and adjust pace accordingly.
+However, the anticipatory regulation system described by St Clair Gibson et al. [@stclairgibson2006] and Tucker et al. [@tucker2009] can be overridden by motivational and competitive pressures, leading to pacing decisions that exceed the body's metabolic capacity.
+The sub-3-hour barrier carries immense psychological significance for recreational and sub-elite runners, creating a high-pressure decision environment that may promote overconfidence and risk-taking behavior [@konings2018].
+Notably, the Failure Group in our study was 97.5% male, compared to 94.5% in the Success Group, consistent with well-documented gender differences in competitive risk-taking [@niederle2007] and with our recent analysis of 873,334 Berlin Marathon finishers showing that male runners are twice as likely to experience catastrophic deceleration compared to female runners [@seffrin2026].
+
+From a practical standpoint, the identification of a pacing CV threshold of 5.65% as a highly accurate predictor of failure (AUC = 0.965; sensitivity 99.0%; specificity 88.0%) has direct implications for coaching and race-day strategy.
+Previous work by Santos-Lozano et al. [@santos-lozano2014] established that lower pacing variability is associated with superior marathon performance, with top runners maintaining a CV of approximately 7--8% across all segments.
+More recently, Díaz et al. [@diaz2024] validated the CV as a robust metric for evaluating pacing behavior in long-distance running.
+Our findings extend these observations by providing a specific, data-driven threshold that distinguishes success from failure at the sub-3-hour barrier.
+This threshold is simple to compute from standard GPS watch data and could be integrated into real-time pacing alerts, enabling runners and coaches to detect and correct excessive variability before the metabolic damage becomes irreversible.
+
+## Practical Applications
+
+These findings carry several implications for coaches, athletes, and technology developers.
+First, for runners targeting the sub-3-hour barrier, the data unequivocally demonstrate that the capacity is already present at the halfway mark---the critical gap is execution, not fitness.
+Training programs should therefore dedicate specific sessions to pacing discipline, including race-pace tempo runs with strict segment targets and negative-split long runs.
+Second, the CV threshold of 5.65% offers a concrete, actionable metric: coaches can analyze past race data to identify athletes prone to pacing collapse and design targeted interventions.
+Third, modern GPS-enabled wearables are capable of computing segment-by-segment pacing variability in real time; integrating a CV-based alert system could provide runners with an early warning of impending metabolic failure, allowing corrective action before the point of no return.
+Finally, given the psychological pressure associated with time barriers, mental preparation strategies---such as pre-race commitment to conservative first-half targets and cognitive reappraisal techniques for managing competitive impulses---should be incorporated into holistic race preparation.
+
+## Limitations
+
+Several limitations should be acknowledged.
+First, while the dataset is extensive, it relies on split times and net finish times without direct physiological measures (e.g., heart rate, blood lactate, or muscle glycogen levels), precluding a definitive causal link between pacing decline and specific metabolic events.
+Second, although the Berlin Marathon course is flat and conditions are relatively consistent, weather variations across the 27-year study period may have influenced aggregate pacing strategies; however, the large sample size mitigates the impact of individual anomalous years.
+Third, the operational definitions employed---including the Golden Window bandwidth of ±30 seconds and the Failure cutoff of >3:05:00---represent analytical choices that, while validated through sensitivity analyses, may influence group composition.
+Fourth, the K-Means algorithm with *k* = 2 provides a parsimonious but potentially simplified representation of the pacing strategy spectrum; finer-grained clustering may reveal additional subtypes that were not captured in the present analysis.
+Fifth, the cohort was predominantly male (94--97%), limiting the generalizability of findings to female marathon runners.
+Finally, the retrospective observational design precludes causal inference; prospective interventional studies are needed to confirm whether pacing-focused coaching interventions can reduce failure rates at the sub-3-hour barrier.
 
 # Conclusion
 
-<!-- TODO: write after Discussion -->
+This study provides compelling evidence that pacing discipline, not aerobic fitness, is the primary determinant of success at the sub-3-hour marathon barrier.
+By leveraging a quasi-experimental "Golden Window" design that matched 9,585 runners on half-marathon capacity, we demonstrated that the divergence between success and failure originates entirely in pacing execution during the second half of the race.
+Two distinct pacing archetypes emerged: a controlled Positive Split pattern associated with a 98.3% success rate, and a Metabolic Crash pattern---characterized by an aggressive start and catastrophic late-race collapse---associated with a 71.3% failure rate.
+
+The identification of a pacing CV threshold of 5.65% as a single-metric predictor with 96.5% discriminative accuracy offers a practical, data-driven tool for coaches and athletes.
+This threshold is computable from standard GPS data and could be operationalized as a real-time pacing alert, providing runners with actionable feedback before metabolic failure becomes irreversible.
+
+Future research should validate this threshold across different marathon courses and environmental conditions, investigate the efficacy of CV-based real-time feedback interventions in prospective trials, and explore the psychological mechanisms---particularly the role of time-barrier pressure and competitive overconfidence---that drive the adoption of unsustainable pacing strategies in sub-elite marathon runners.
 
 # Figure Legends
 
