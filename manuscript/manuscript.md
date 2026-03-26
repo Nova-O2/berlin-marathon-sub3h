@@ -1,7 +1,21 @@
 # Introduction
 
-<!-- One sentence per line for clean git diffs -->
-<!-- TODO: write Introduction after Methods and Results are finalized -->
+The sub-3-hour marathon represents one of the most coveted performance barriers in recreational and sub-elite distance running, achieved by fewer than 5% of all marathon finishers worldwide [@smyth2021].
+Unlike the sub-2-hour barrier that defines elite competition, the sub-3-hour threshold is physiologically attainable for a substantial pool of trained recreational runners, yet a large proportion of those who attempt it fail---often dramatically---in the final kilometers of the race.
+Understanding why runners with demonstrably sufficient aerobic fitness fail to translate their capacity into a successful outcome has important implications for coaching, race strategy, and the broader science of endurance performance.
+
+It is well established that pacing strategy---the distribution of work rate over the duration of the race---is a critical determinant of marathon performance [@sha2024; @ramos-campo2025].
+A large body of evidence indicates that even or slightly negative pacing profiles are associated with superior outcomes, while aggressive positive splits (starting fast and progressively slowing) increase the risk of catastrophic late-race deceleration, colloquially known as "hitting the wall" [@smyth2021; @burke2025].
+This phenomenon is thought to be primarily driven by glycogen depletion: when muscle glycogen stores are exhausted, the metabolic shift to lipid oxidation imposes a reduction in sustainable power output of approximately 15--25%, resulting in a dramatic and often irreversible pace collapse [@rapoport2010; @hearris2018].
+
+Despite the growing literature on marathon pacing, a fundamental question remains unresolved: among runners with equivalent aerobic capacity, what determines whether one succeeds and another fails?
+Previous large-scale studies have demonstrated associations between pacing variability and performance [@santos-lozano2014; @diaz2024], and between aggressive starts and late-race collapse [@smyth2021].
+However, these studies have been unable to disentangle the confounding effects of fitness and pacing, as faster runners naturally exhibit more stable pacing profiles.
+Consequently, it remains unclear whether pacing collapse is primarily a consequence of insufficient fitness or of poor strategic execution in runners who possess adequate capacity.
+
+To address this gap, the present study employed a novel quasi-experimental design---termed the "Golden Window"---that matches runners on half-marathon split time, thereby controlling for aerobic fitness and isolating pacing execution as the sole variable of interest.
+By analyzing 9,585 Berlin Marathon finishers (1999--2025) who passed the halfway mark at virtually identical pace but diverged dramatically in their final outcome, we aimed to: (1) characterize the segment-by-segment pacing trajectories that distinguish sub-3-hour success from failure; (2) identify distinct pacing archetypes using unsupervised machine learning; and (3) quantify the predictive accuracy of pacing variability as a standalone metric for forecasting race outcome.
+We hypothesized that pacing variability, not half-marathon speed, would be the dominant predictor of failure, and that a data-driven pacing threshold could serve as a practical tool for coaches and athletes targeting the sub-3-hour barrier.
 
 # Methods
 
