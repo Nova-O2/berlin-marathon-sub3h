@@ -1,25 +1,31 @@
+# Python
 __pycache__/
-.ipynb_checkpoints/
 *.pyc
 *.pyo
-.env
 .venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
 desktop.ini
 .DS_Store
 Thumbs.db
+
+# IDE
 .vscode/
 .idea/
 .claude/
 
-# Generated exports (rebuild with make)
-manuscript/exports/
-
-# Reviewer/co-author imports (temporary .docx with comments/track changes)
-manuscript/imports/
-
-# Original .docx source files (converted to manuscript.md)
-manuscript/*.docx
-
-# Large data files (hosted externally)
+# Large data files (download from Zenodo, or regenerate via notebooks)
 data/*.csv
 data/*.parquet
+
+# Manuscript and build (moved to workspace)
+manuscript/
+Makefile
+scripts/
+
+# Generated exports
+*.docx
