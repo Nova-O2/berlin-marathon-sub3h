@@ -24,7 +24,7 @@ A cluster analysis of 9,585 runners at the Berlin Marathon (1999–2025).
 
 ## Reproduction
 
-Download the dataset from Zenodo and place in `data/`. See [`data/README.md`](data/README.md) for details.
+Download the dataset from Zenodo (https://doi.org/10.5281/zenodo.19342683) and place in `data/`. See [`data/README.md`](data/README.md) for details.
 
 ```bash
 pip install -r requirements.txt

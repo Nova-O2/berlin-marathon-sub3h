@@ -6,7 +6,7 @@ The original dataset contains 880,779 finisher records from the BMW Berlin Marat
 
 ## How to obtain
 
-Download `Dataset_Berlin_Marathon_1999-2025_original.csv` from Zenodo and place it in this directory:
+Download `Dataset_Berlin_Marathon_1999-2025_original.csv` from Zenodo (https://doi.org/10.5281/zenodo.19342683) and place it in this directory:
 
 ```
 data/
