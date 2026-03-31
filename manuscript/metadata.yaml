@@ -16,6 +16,9 @@ authors:
   - name: Katja Weiss
     affiliation: Institute of Primary Care, University of Zurich, Zurich, Switzerland
     orcid: 0000-0003-1247-6754
+  - name: Daniel Ferreira
+    affiliation: Nova O2 Sports Science, São José dos Campos, Brazil
+    orcid: 0000-0002-8958-9442
   - name: Beat Knechtle
     affiliation: Institute of Primary Care, University of Zurich, Zurich, Switzerland
     orcid: 0000-0002-2412-9103
@@ -33,7 +36,6 @@ keywords:
   - cluster analysis
   - endurance performance
   - sub-3-hour
-date: 2026
 lang: en
 journal: Sports Medicine
 status: Manuscript Complete

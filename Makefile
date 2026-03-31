@@ -15,9 +15,12 @@ FIGURE_COPY = $(patsubst figures/%,$(EXPORT_DIR)/%,$(FIGURE_SRCS))
 
 REF_DOC = $(if $(wildcard $(JOURNAL_TEMPLATE)),--reference-doc=$(JOURNAL_TEMPLATE),)
 
+CSL = manuscript/journal.csl
+
 PANDOC_OPTS = --metadata-file=$(META) \
               --citeproc \
               --bibliography=$(BIB) \
+              --csl=$(CSL) \
               --wrap=none
 
 .PHONY: all docx pdf tables title cover figures clean

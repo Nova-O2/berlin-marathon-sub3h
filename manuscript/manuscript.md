@@ -1,25 +1,30 @@
-# Introduction
+# Key Points
 
-The sub-3-hour marathon represents one of the most coveted performance barriers in recreational and sub-elite distance running, achieved by fewer than 5% of all marathon finishers worldwide [@smyth2021].
-Unlike the sub-2-hour barrier that defines elite competition, the sub-3-hour threshold is physiologically attainable for a substantial pool of trained recreational runners, yet a large proportion of those who attempt it fail---often dramatically---in the final kilometers of the race.
-Understanding why runners with demonstrably sufficient aerobic fitness fail to translate their capacity into a successful outcome has important implications for coaching, race strategy, and the broader science of endurance performance.
+- Among 9,585 runners who reached the Berlin Marathon halfway mark at the same pace, those who failed to break 3 hours had nearly 4 times greater pacing variability than those who succeeded---despite identical fitness at the midpoint.
+- A single metric---pacing coefficient of variation---predicted sub-3-hour failure with 96.5% accuracy, offering a practical tool that coaches and athletes can compute from standard GPS watch data.
+- The critical difference between success and failure was not how fast runners started, but how well they managed their pace after 30 km, when glycogen depletion drives irreversible deceleration.
+
+# 1 Introduction
 
 It is well established that pacing strategy---the distribution of work rate over the duration of the race---is a critical determinant of marathon performance [@sha2024; @ramos-campo2025].
-A large body of evidence indicates that even or slightly negative pacing profiles are associated with superior outcomes, while aggressive positive splits (starting fast and progressively slowing) increase the risk of catastrophic late-race deceleration, colloquially known as "hitting the wall" [@smyth2021; @burke2025].
-This phenomenon is thought to be primarily driven by glycogen depletion: when muscle glycogen stores are exhausted, the metabolic shift to lipid oxidation imposes a reduction in sustainable power output of approximately 15--25%, resulting in a dramatic and often irreversible pace collapse [@rapoport2010; @hearris2018].
+Even or slightly negative pacing profiles are associated with superior outcomes, while aggressive positive splits increase the risk of catastrophic late-race deceleration, colloquially known as "hitting the wall" [@smyth2021; @burke2025].
+Large-scale analyses have demonstrated associations between pacing variability and performance [@santos-lozano2014; @diaz2024], and between aggressive starts and late-race collapse [@smyth2021].
+The physiological basis for this phenomenon is glycogen depletion: when muscle glycogen stores are exhausted, the metabolic shift to lipid oxidation imposes a reduction in sustainable power output of approximately 15--25%, resulting in a dramatic and often irreversible pace collapse [@rapoport2010; @hearris2018].
 
-Despite the growing literature on marathon pacing, a fundamental question remains unresolved: among runners with equivalent aerobic capacity, what determines whether one succeeds and another fails?
-Previous large-scale studies have demonstrated associations between pacing variability and performance [@santos-lozano2014; @diaz2024], and between aggressive starts and late-race collapse [@smyth2021].
-However, these studies have been unable to disentangle the confounding effects of fitness and pacing, as faster runners naturally exhibit more stable pacing profiles.
+Despite this growing body of evidence, a fundamental question remains unresolved: among runners with equivalent aerobic capacity, what determines whether one succeeds and another fails?
+The sub-3-hour marathon represents one of the most coveted performance barriers in recreational and sub-elite distance running, achieved by fewer than 5% of all marathon finishers worldwide [@smyth2021].
+Unlike the sub-2-hour barrier that defines elite competition, the sub-3-hour threshold is physiologically attainable for a substantial pool of trained recreational runners, yet a large proportion of those who attempt it fail---often dramatically---in the final kilometers of the race [@burke2025].
+Understanding why runners with demonstrably sufficient aerobic fitness fail to translate their capacity into a successful outcome has important implications for coaching, race strategy, and the broader science of endurance performance [@ramos-campo2025].
+However, previous studies have been unable to disentangle the confounding effects of fitness and pacing, as faster runners naturally exhibit more stable pacing profiles.
 Consequently, it remains unclear whether pacing collapse is primarily a consequence of insufficient fitness or of poor strategic execution in runners who possess adequate capacity.
 
 To address this gap, the present study employed a novel quasi-experimental design---termed the "Golden Window"---that matches runners on half-marathon split time, thereby controlling for aerobic fitness and isolating pacing execution as the sole variable of interest.
 By analyzing 9,585 Berlin Marathon finishers (1999--2025) who passed the halfway mark at virtually identical pace but diverged dramatically in their final outcome, we aimed to: (1) characterize the segment-by-segment pacing trajectories that distinguish sub-3-hour success from failure; (2) identify distinct pacing archetypes using unsupervised machine learning; and (3) quantify the predictive accuracy of pacing variability as a standalone metric for forecasting race outcome.
 We hypothesized that pacing variability, not half-marathon speed, would be the dominant predictor of failure, and that a data-driven pacing threshold could serve as a practical tool for coaches and athletes targeting the sub-3-hour barrier.
 
-# Methods
+# 2 Methods
 
-## Study Design and Data Source
+## 2.1 Study Design and Data Source
 
 This study employed a retrospective observational design leveraging a large-scale dataset to analyze pacing strategies and performance resilience among sub-3-hour marathon runners.
 Data were extracted from the official BMW Berlin Marathon Results Archive, covering a 27-year period from 1999 to 2025.
@@ -28,7 +33,7 @@ Its predominantly flat course profile (elevation gain < 20 m) and historically c
 The initial data extraction yielded a master dataset of *n* = 880,779 finishers recorded via electronic transponder timing systems (chip timing).
 Given that the data were obtained from a publicly accessible repository and analyzed in an anonymized format, this study was exempt from Institutional Review Board (IRB) approval, in accordance with standard ethical guidelines for the use of public secondary data.
 
-## Data Pre-processing and Normalization
+## 2.2 Data Pre-processing and Normalization
 
 Prior to statistical analysis, the raw data underwent a systematic pre-processing and normalization procedure to ensure consistency across the 27-year longitudinal archive.
 Categorical variables, specifically gender, were harmonized from various archival formats---including distinct German and English terminologies used in earlier editions of the race---into a standardized binary classification (M/F).
@@ -41,7 +46,7 @@ Finally, runners with any segment pace outside the physiologically plausible ran
 The sequential exclusion process was as follows: missing net finish time (*n* = 2), missing half-marathon split (*n* = 699), implausible finish times (*n* = 7,408), missing any split checkpoint (*n* = 16,062), non-monotonic splits (*n* = 57), and extreme segment paces (*n* = 22,383).
 Consequently, 46,611 records (5.3% of the initial sample) were excluded, resulting in a complete-case dataset of 834,168 finishers for the subsequent analysis.
 
-## Participants and Cohort Selection
+## 2.3 Participants and Cohort Selection
 
 From the valid dataset, we established two groups using a quasi-experimental matching design based on half-marathon split times.
 The Success Group was defined as runners who broke the sub-3-hour barrier within a narrow window of 2:58:00 to 2:59:59 (*n* = 7,710).
@@ -53,7 +58,7 @@ This design ensured that all analyzed subjects possessed comparable baseline cap
 Runners finishing in the "grey zone" (3:00:00--3:04:59; *n* = 1,562) were excluded to maximize the contrast between success and metabolic collapse.
 Following these criteria, the final analytical cohort consisted of *n* = 9,585 runners.
 
-## Operational Definitions and Outcome Measures
+## 2.4 Operational Definitions and Outcome Measures
 
 To characterize pacing behavior throughout the race, raw temporal splits were converted into segment paces (expressed in minutes per kilometer) for nine sequential intervals: 0--5 km, 5--10 km, 10--15 km, 15--20 km, 20--25 km, 25--30 km, 30--35 km, 35--40 km, and the final 2.195 km segment (40 km--Finish).
 This granular segmentation allowed for the detection of specific strategic phases, including the initial start strategy, the mid-race steady state, and the critical "metabolic wall" typically encountered after the 30 km mark [@hearris2018].
@@ -64,7 +69,7 @@ Lower CV values denote a more isokinetic ("metronomic") energy distribution, whi
 
 The primary outcome measure was defined as a binary variable: "Success" (finishing within the 2:58:00--2:59:59 barrier-breaking window) versus "Failure" (metabolic collapse resulting in a finish time > 3:05:00 despite identical half-marathon fitness).
 
-## Pacing Phenotyping via Unsupervised Learning
+## 2.5 Pacing Phenotyping via Unsupervised Learning
 
 To identify distinct pacing archetypes without the bias of pre-defined categories (such as "positive split" or "negative split"), we employed K-Means clustering, an unsupervised machine learning algorithm [@pedregosa2011].
 Crucially, to ensure the algorithm clustered runners based on strategic execution rather than absolute velocity, the feature set was normalized: each of the nine segment paces was expressed as a percentage of the runner's individual mean race pace, rather than in absolute units (min/km).
@@ -77,7 +82,7 @@ The value of *k* yielding the highest mean silhouette score was selected as opti
 To ensure reproducibility, a fixed random seed was set prior to initialization (random_state = 42).
 Each resulting cluster was then analyzed and labeled according to its centroid's pacing profile.
 
-## Statistical Analysis
+## 2.6 Statistical Analysis
 
 Descriptive statistics were computed to characterize the cohort.
 Given the non-normal distribution of pacing variables, continuous data are presented as means and standard deviations, with inferential comparisons performed using the Mann-Whitney U test.
@@ -98,9 +103,9 @@ All data processing, statistical inference, machine learning implementation, and
 Key computational libraries included Pandas and NumPy for data manipulation [@mckinney2010], SciPy for statistical testing [@virtanen2020], Scikit-learn for clustering algorithms and predictive modeling [@pedregosa2011], and Matplotlib and Seaborn for the generation of publication-quality figures.
 To promote reproducibility and adhere to open science principles, the complete analytical code, datasets, and supplementary figures are available in a public repository [ANONYMOUS GITHUB LINK --- blinded for peer review].
 
-# Results
+# 3 Results
 
-## Participant Characteristics
+## 3.1 Participant Characteristics
 
 The final analytical cohort comprised *n* = 9,585 runners, including 7,710 in the Success Group and 1,875 in the Failure Group.
 As summarized in **Table 1**, the demographic distribution was predominantly male in both groups (Success: 94.5%; Failure: 97.5%).
@@ -109,10 +114,10 @@ The most prevalent age categories were 35--39 and 40--44 years in both groups.
 [INSERT TABLE 1 HERE]
 
 The quasi-experimental matching was validated by the near-identical half-marathon times between groups: Success runners passed the halfway mark at 1:28:05 (± 2:01), while Failure runners recorded 1:28:08 (± 0:17), a difference of only 3 seconds.
-Despite this equivalent baseline fitness, finish times diverged dramatically: Success runners completed the marathon in 2:58:59 (± 0:33), whereas Failure runners finished in 3:12:34 (± 7:59), a gap of 13 minutes and 35 seconds (*p* < 0.001, *r* = 1.000).
+Despite this equivalent baseline fitness, finish times diverged dramatically: Success runners completed the marathon in 2:58:59 (± 0:33), whereas Failure runners finished in 3:12:34 (± 7:59), a gap of 13 min 35 s (*p* < 0.001, *r* = 1.000).
 Pacing variability was 3.8 times higher in the Failure Group (CV: 11.52% ± 5.05%) compared to the Success Group (CV: 3.02% ± 2.75%; *p* < 0.001, *r* = 0.929).
 
-## Segment-by-Segment Pacing Analysis
+## 3.2 Segment-by-Segment Pacing Analysis
 
 All nine race segments showed statistically significant pace differences between groups after Bonferroni correction (*p* < 0.001 for all segments; adjusted threshold: *p* < 0.0056).
 As detailed in **Table 2**, the pacing trajectories revealed a distinctive crossover pattern.
@@ -123,22 +128,22 @@ In the early segments (0--15 km), Failure runners were paradoxically *faster* th
 The crossover occurred at the 15--20 km segment, where Failure runners began to decelerate relative to their successful counterparts (*r* = 0.253).
 From this point, the divergence escalated progressively through the second half of the race.
 Effect sizes increased from *r* = 0.664 at 20--25 km to *r* = 0.865 at 25--30 km, reaching *r* = 0.948 at 30--35 km.
-The largest absolute pace difference was observed at 35--40 km, where Failure runners averaged 5.49 ± 0.70 min/km compared to 4.43 ± 0.23 min/km in the Success Group---a gap of 1.06 min/km (*r* = 0.966).
-The final segment (40--42.2 km) maintained a similarly large effect (*r* = 0.931), with Failure runners averaging 5.29 ± 0.68 min/km versus 4.33 ± 0.27 min/km.
+The largest absolute pace difference was observed at 35--40 km, where Failure runners averaged 5.49 ± 0.70 min/km (10.9 km/h) compared to 4.43 ± 0.23 min/km (13.5 km/h) in the Success Group---a gap of 1.06 min/km (*r* = 0.966).
+The final segment (40--42.2 km) maintained a similarly large effect (*r* = 0.931), with Failure runners averaging 5.29 ± 0.68 min/km (11.3 km/h) versus 4.33 ± 0.27 min/km (13.9 km/h).
 
 [INSERT FIGURE 5 HERE]
 
-## Pacing Archetypes
+## 3.3 Pacing Archetypes
 
 The silhouette analysis identified *k* = 2 as the optimal number of clusters (silhouette score = 0.44), consistently outperforming higher values of *k* (k = 3: 0.40; k = 4: 0.36; k = 5: 0.33).
 The two resulting archetypes, derived from the shape-normalized pace profiles of 9,585 runners, were characterized as follows:
 
 **Archetype 1 --- Positive Split / Fade** (*n* = 7,127; 74.3%): Runners in this cluster exhibited a controlled, gradual deceleration pattern.
-Mean starting pace was 4.20 min/km, with a modest increase to 4.28 min/km by the end of the race, representing a pace change of +3.2%.
+Mean starting pace was 4.20 min/km (14.3 km/h), with a modest increase to 4.28 min/km (14.0 km/h) by the end of the race, representing a pace change of +3.2%.
 The within-runner pacing CV was 1.48%, indicating high execution discipline.
 
 **Archetype 2 --- Metabolic Crash** (*n* = 2,458; 25.7%): Runners in this cluster displayed a dramatic late-race collapse.
-Mean starting pace was 4.09 min/km---faster than Archetype 1---but deteriorated sharply to 5.20 min/km, representing a pace change of +29.1%.
+Mean starting pace was 4.09 min/km (14.7 km/h)---faster than Archetype 1---but deteriorated sharply to 5.20 min/km (11.5 km/h), representing a pace change of +29.1%.
 The within-runner pacing CV was 11.07%, indicating highly variable and unstable pacing execution.
 
 [INSERT FIGURE 1 HERE]
@@ -149,7 +154,7 @@ In stark contrast, among Metabolic Crash runners, 71.3% failed to break the 3-ho
 
 [INSERT FIGURE 2 HERE]
 
-## Predictive Modeling
+## 3.4 Predictive Modeling
 
 The multivariate logistic regression model demonstrated near-perfect discrimination between Success and Failure outcomes (pseudo-R² = 0.959; AUC-ROC = 0.998).
 Among the predictors evaluated, the ratio of second-half to first-half mean pace and the pace at 35--40 km were identified as the strongest contributors.
@@ -165,7 +170,7 @@ At this threshold, the model correctly identified 99.0% of all runners who faile
 
 [INSERT FIGURE 4 HERE]
 
-# Discussion
+# 4 Discussion
 
 The primary aim of this study was to determine whether pacing execution, independent of aerobic fitness, distinguishes runners who achieve a sub-3-hour marathon from those who fail despite equivalent half-marathon capacity.
 Our analysis of 9,585 runners confirms that pacing variability---not half-marathon speed---is the critical determinant of success at the sub-3-hour barrier.
@@ -200,7 +205,7 @@ More recently, Díaz et al. [@diaz2024] validated the CV as a robust metric for 
 Our findings extend these observations by providing a specific, data-driven threshold that distinguishes success from failure at the sub-3-hour barrier.
 This threshold is simple to compute from standard GPS watch data and could be integrated into real-time pacing alerts, enabling runners and coaches to detect and correct excessive variability before the metabolic damage becomes irreversible.
 
-## Practical Applications
+## 4.1 Practical Applications
 
 These findings carry several implications for coaches, athletes, and technology developers.
 First, for runners targeting the sub-3-hour barrier, the data unequivocally demonstrate that the capacity is already present at the halfway mark---the critical gap is execution, not fitness.
@@ -209,7 +214,7 @@ Second, the CV threshold of 5.65% offers a concrete, actionable metric: coaches 
 Third, modern GPS-enabled wearables are capable of computing segment-by-segment pacing variability in real time; integrating a CV-based alert system could provide runners with an early warning of impending metabolic failure, allowing corrective action before the point of no return.
 Finally, given the psychological pressure associated with time barriers, mental preparation strategies---such as pre-race commitment to conservative first-half targets and cognitive reappraisal techniques for managing competitive impulses---should be incorporated into holistic race preparation.
 
-## Limitations
+## 4.2 Limitations
 
 Several limitations should be acknowledged.
 First, while the dataset is extensive, it relies on split times and net finish times without direct physiological measures (e.g., heart rate, blood lactate, or muscle glycogen levels), precluding a definitive causal link between pacing decline and specific metabolic events.
@@ -219,7 +224,7 @@ Fourth, the K-Means algorithm with *k* = 2 provides a parsimonious but potential
 Fifth, the cohort was predominantly male (94--97%), limiting the generalizability of findings to female marathon runners.
 Finally, the retrospective observational design precludes causal inference; prospective interventional studies are needed to confirm whether pacing-focused coaching interventions can reduce failure rates at the sub-3-hour barrier.
 
-# Conclusion
+# 5 Conclusions
 
 This study provides compelling evidence that pacing discipline, not aerobic fitness, is the primary determinant of success at the sub-3-hour marathon barrier.
 By leveraging a quasi-experimental "Golden Window" design that matched 9,585 runners on half-marathon capacity, we demonstrated that the divergence between success and failure originates entirely in pacing execution during the second half of the race.
@@ -230,20 +235,63 @@ This threshold is computable from standard GPS data and could be operationalized
 
 Future research should validate this threshold across different marathon courses and environmental conditions, investigate the efficacy of CV-based real-time feedback interventions in prospective trials, and explore the psychological mechanisms---particularly the role of time-barrier pressure and competitive overconfidence---that drive the adoption of unsustainable pacing strategies in sub-elite marathon runners.
 
-# Figure Legends
+# Declarations
 
-**Figure 1.** Mean pace profiles (min/km) across nine race segments for each pacing archetype.
-Shaded bands represent ± 1 SD.
+## Funding
 
-**Figure 2.** Distribution of race outcomes (Success vs. Failure) within each pacing archetype.
+This research received no external funding.
 
-**Figure 3.** Pacing variability (CV) distributions for Success and Failure groups.
+## Conflicts of Interest/Competing Interests
 
-**Figure 4.** Start pace (0--5 km) versus finish pace (40 km--Finish) for each runner, colored by outcome.
-The diagonal represents even-split pacing.
+The authors declare no competing interests.
 
-**Figure 5.** Segment-by-segment pacing comparison between Success and Failure groups.
-All nine segments were significantly different after Bonferroni correction (*p* < 0.001).
-Shaded area highlights the progressive divergence in the second half.
+## Ethics Approval
+
+This study used publicly available race results obtained from the official BMW Berlin Marathon Results Archive.
+All data were analyzed in anonymized format.
+The study was exempt from Institutional Review Board (IRB) approval, in accordance with standard ethical guidelines for the use of public secondary data, and was performed in accordance with the 1964 Declaration of Helsinki and its later amendments.
+
+## Consent to Participate
+
+Not applicable.
+
+## Consent for Publication
+
+Not applicable.
+
+## Availability of Data and Materials
+
+The anonymized dataset and all analytical code are available in a companion repository that will be made publicly available upon acceptance.
+
+## Code Availability
+
+All data processing scripts, statistical analyses, and figure generation code are implemented in Python 3.12 and will be made publicly available in a companion repository upon acceptance.
+
+## Author Contributions
+
+A.S. conceived the study, designed the analytical framework, performed all data processing, statistical analyses, and machine learning implementation, and wrote the original draft.
+E.V. contributed to data curation and manuscript review.
+M.S.A. contributed to manuscript review.
+T.R. contributed to manuscript review.
+K.W. contributed to manuscript review.
+D.F. contributed to data validation and manuscript review.
+B.K. supervised the study, contributed to study design, and critically revised the manuscript.
+All authors read and approved the final version of the manuscript.
 
 # References
+
+# Figure Legends
+
+**Fig. 1** Mean pace profiles (min/km) across nine race segments for each pacing archetype.
+Shaded bands represent ± 1 SD
+
+**Fig. 2** Distribution of race outcomes (Success vs. Failure) within each pacing archetype
+
+**Fig. 3** Pacing variability (CV) distributions for Success and Failure groups
+
+**Fig. 4** Start pace (0--5 km) versus finish pace (40 km--Finish) for each runner, colored by outcome.
+The diagonal represents even-split pacing
+
+**Fig. 5** Segment-by-segment pacing comparison between Success and Failure groups.
+All nine segments were significantly different after Bonferroni correction (*p* < 0.001).
+Shaded area highlights the progressive divergence in the second half

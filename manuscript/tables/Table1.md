@@ -1,3 +1,5 @@
+**Table 1** Participant characteristics and performance metrics by group
+
 | Variable | Success (n=7,710) | Failure (n=1,875) | p-value | r (rank-biserial) |
 |---|---|---|---|---|
 | N | 7710 | 1875 |  |  |

@@ -1,3 +1,5 @@
+**Table 2** Segment-by-segment pace comparison between Success and Failure groups
+
 | Segment | Success (min/km) | Failure (min/km) | p-value | Sig. | r (rank-biserial) |
 |---|---|---|---|---|---|
 | 0–5 km | 4.18 ± 0.16 | 4.14 ± 0.09 | <0.001 | *** | -0.292 |

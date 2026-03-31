@@ -7,6 +7,9 @@ A cluster analysis of 9,585 runners at the Berlin Marathon (1999–2025).
 - **Aldo Seffrin** — Nova O2 Sports Science, São José dos Campos, Brazil
 - **Elias Villiger** — University of Zurich, Switzerland
 - **Marília dos Santos Andrade** — UNIFESP, Brazil
+- **Thomas Rosemann** — University of Zurich, Switzerland
+- **Katja Weiss** — University of Zurich, Switzerland
+- **Daniel Ferreira** — Nova O2 Sports Science, São José dos Campos, Brazil
 - **Beat Knechtle** — University of Zurich, Switzerland
 
 ## Status

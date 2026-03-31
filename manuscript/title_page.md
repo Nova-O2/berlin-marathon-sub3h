@@ -9,7 +9,8 @@
 3. **Marília dos Santos Andrade** — Department of Physiology, Federal University of São Paulo, Brazil. marilia.andrade@unifesp.br | ORCID: 0000-0002-7004-4565
 4. **Thomas Rosemann** — Institute of Primary Care, University of Zurich, Zurich, Switzerland. thomas.rosemann@usz.ch | ORCID: 0000-0002-6436-6306
 5. **Katja Weiss** — Institute of Primary Care, University of Zurich, Zurich, Switzerland. katja@weiss.co.com | ORCID: 0000-0003-1247-6754
-6. **Beat Knechtle\*** — Institute of Primary Care, University of Zurich, Zurich, Switzerland. beat.knechtle@hispeed.ch | ORCID: 0000-0002-2412-9103
+6. **Daniel Ferreira** — Nova O2 Sports Science, São José dos Campos, Brazil. | ORCID: 0000-0002-8958-9442
+7. **Beat Knechtle\*** — Institute of Primary Care, University of Zurich, Zurich, Switzerland. beat.knechtle@hispeed.ch | ORCID: 0000-0002-2412-9103
 
 **\*Corresponding Author:** Prof. Dr. med. Beat Knechtle, Medbase St. Gallen am Vadianplatz, Vadianstrasse 26, 9001 St. Gallen, Switzerland. Tel: +41 (0) 71 226 93 00 | Fax: +41 (0) 71 226 93 01
 
