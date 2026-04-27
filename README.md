@@ -10,12 +10,12 @@ A cluster analysis of 9,585 runners at the Berlin Marathon (1999–2025).
 - **Thomas Rosemann** — University of Zurich, Switzerland
 - **Katja Weiss** — University of Zurich, Switzerland
 - **Daniel Ferreira** — Nova O2 Sports Science, São José dos Campos, Brazil
-- **Beat Knechtle** — University of Zurich, Switzerland
+- **Beat Knechtle** — University of Zurich, Switzerland *(corresponding author)*
 
 ## Status
 
 - **Phase:** Submitted
-- **Journal:** Sports Medicine
+- **Journal:** PLOS ONE
 - **Data:** Berlin Marathon 1999–2025 (880,779 raw records)
 
 ## Key Finding
@@ -51,11 +51,11 @@ notebooks/
 └── FIGURES.ipynb              # Publication figures (TIFF 600 DPI)
 
 figures/
-├── Figure_1_Pacing_Profiles.tiff
-├── Figure_2_Cluster_Outcome.tiff
-├── Figure_3_CV_by_Outcome.tiff
-├── Figure_4_Start_vs_Finish.tiff
-├── Figure_5_Segment_Divergence.tiff
+├── Figure_1_Segment_Divergence.tiff
+├── Figure_2_Pacing_Profiles.tiff
+├── Figure_3_Cluster_Outcome.tiff
+├── Figure_4_CV_by_Outcome.tiff
+├── Figure_5_Start_vs_Finish.tiff
 └── supplementary/
     ├── Supp_1_Clustering_Validation.tiff
     └── Supp_2_ROC_Pacing_CV.tiff

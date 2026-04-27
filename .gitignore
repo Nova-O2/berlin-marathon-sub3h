@@ -26,6 +26,9 @@ data/*.parquet
 manuscript/
 Makefile
 scripts/
+_planning/
+_reviews/
+_comms/
 
 # Generated exports
 *.docx
