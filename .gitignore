@@ -8,12 +8,10 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# OS
+# OS / IDE
 desktop.ini
 .DS_Store
 Thumbs.db
-
-# IDE
 .vscode/
 .idea/
 .claude/
@@ -22,13 +20,12 @@ Thumbs.db
 data/*.csv
 data/*.parquet
 
-# Manuscript and build (moved to workspace)
+# Build artefacts
 manuscript/
 Makefile
 scripts/
-_planning/
-_reviews/
-_comms/
-
-# Generated exports
 *.docx
+
+# Working folders
+_*/
+*.tmp

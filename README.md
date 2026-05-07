@@ -14,19 +14,7 @@ A cluster analysis of 9,585 runners at the Berlin Marathon (1999–2025).
 
 ## Status
 
-- **Status:** 🚧
-- **REDACTED**
-- **REDACTED**
-- **REDACTED**
-- **REDACTED**
-- **REDACTED**
-
-### Pesquisa
-- **REDACTED**
-- **REDACTED**
-- **Journal:** PLOS ONE
-- **REDACTED**
-- **Data:** Berlin Marathon 1999–2025 (880,779 raw records)
+Manuscript under technical check and editorial review at *PLOS ONE*.
 
 ## Key Finding
 
