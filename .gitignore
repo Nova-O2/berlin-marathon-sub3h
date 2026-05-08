@@ -1,3 +1,4 @@
+# CUSTOM-START (auto-wrapped 2026-05-08 by sync_paper.sh — preserve paper-specific patterns)
 # Python
 __pycache__/
 *.pyc
@@ -29,3 +30,13 @@ scripts/
 # Working folders
 _*/
 *.tmp
+# CUSTOM-END
+manuscript/exports/
+manuscript/imports/*.docx
+manuscript/imports/*.pdf
+!manuscript/imports/README.md
+manuscript/*.docx
+_comms/
+_planning/*
+_reviews/
+!_planning/audit_scope.md
