@@ -20,7 +20,7 @@ Manuscript under technical check and editorial review at *PLOS ONE*.
 
 **The Pacing Execution Paradox:** Among 9,585 runners who reached the half-marathon at identical sub-3h pace (~1:28:05), those who failed (finish >3:05) had 3.8x higher pacing variability (CV 11.5% vs 3.0%). K-Means clustering (k=2) identified two archetypes: "Positive Split / Fade" (98.3% success rate) and "Metabolic Crash" (71.3% failure rate). Pacing CV alone predicted failure with AUC = 0.965.
 
-## Reproduction
+## Reproducibility
 
 Download the dataset from Zenodo (https://doi.org/10.5281/zenodo.19342683) and place in `data/`. See [`data/README.md`](data/README.md) for details.
 
