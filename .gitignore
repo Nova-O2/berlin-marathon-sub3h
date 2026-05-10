@@ -29,6 +29,7 @@ scripts/
 
 # Working folders
 _*/
+bundles/
 *.tmp
 # CUSTOM-END
 manuscript/exports/
